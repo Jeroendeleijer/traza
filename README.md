@@ -2,45 +2,58 @@
 
 EUDR compliance and supply-chain traceability.
 
-## The regulation
+Bilingual static site: English at `/`, Spanish at `/es/`, sharing `assets/traza.css`.
+No build step — it is plain HTML and CSS and can be served by any static host.
 
-Regulation (EU) 2023/1115 — the EU Deforestation Regulation (EUDR) — bars seven
-commodities and their derived products from being placed on the EU market, or
-exported from it, unless they are deforestation-free and legally produced.
+## Brand
 
-Covered commodities: **cattle, cocoa, coffee, oil palm, rubber, soya, wood**,
-plus the derived products listed in Annex I.
+Implemented from the supplied deck *BRANDING CAFE* (brand system v1.0, September 2026).
 
-## Why it is a traceability problem
+| Token | Value | Role |
+| --- | --- | --- |
+| Traza Red | `#E6342A` | primary signal |
+| Ink | `#151515` | type and dark fields |
+| Paper | `#F4F1EA` | warm neutral |
+| Cobalt | `#2452FF` | logistics / movement |
+| Teal | `#1F8A70` | verified / resolved |
+| Ochre | `#C6922E` | processing / attention |
 
-An operator placing a relevant product on the EU market for the first time must
-carry out due diligence and submit a due diligence statement (DDS) to the EUDR
-Information System, a tool on the EU's TRACES platform. That requires, per
-shipment:
+Type is Instrument Sans for communication and IBM Plex Mono for evidence
+(IDs, coordinates, timestamps, labels), both from Google Fonts.
 
-- geolocation of the plots of land where the commodity was produced
-- chain-of-custody records linking those plots to the shipment
-- evidence of legal production in the country of origin
-- a risk assessment, and mitigation where risk is not negligible
+The **trace line** is the single visual device: line = continuity, node = event,
+red node = verification, mono label = evidence. It appears as the orthogonal path
+in the hero, the rail in the commodity list and the route in the scan cards.
 
-Collecting that data across multi-tier, smallholder-heavy supply chains is the
-hard part, and the reason a software market exists around it.
+The **eight chain icons** (origin, cooperative, harvest, processing, batch,
+transport, point of sale, evidence) are redrawn as inline SVG on a common stroke.
 
-## Timeline
+## Status of the brand
 
-| Who | Applies from |
-| --- | --- |
-| Large and medium operators and traders | 30 December 2026 |
-| Micro and small enterprises | 30 June 2027 |
-| Micro and small operators already under the EU Timber Regulation | 30 December 2026 |
-| Products added by delegated act | 30 December 2027 |
+The source deck is marked **PROPOSAL · NOT APPROVED** and **PENDING APPROVAL**
+on its cover and on every applications slide. Its own "what we propose to
+validate" list is: existing logo, corporate red, trace line, image direction and
+typographic voice; final measurements, variants, interfaces, packaging and
+production guides are explicitly left until after approval. This site implements
+the proposal — it does not mean the proposal has been signed off.
 
-In force since 29 June 2023. The dates above reflect two postponements: a first
-amendment in December 2024, and a second in December 2025 that also changed the
-due diligence requirements. Verify against the source before relying on them.
+## Known gaps
 
-Source: [European Commission — Regulation on deforestation-free products](https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en)
+- **Logo.** No vector file was supplied. `assets/traza-lockup.png` and
+  `assets/traza-wordmark.png` were extracted from the deck's master-red slide as
+  alpha masks, painted with `currentColor` so the mark can render white, red or
+  ink. Replace them with the original vector when it is available.
+- **Photography.** The deck's imagery slide is captioned "conceptual image / to be
+  replaced by real photography" and "no people or fictional places in the final
+  version", so no photography is used here.
+- **Content.** Batch numbers, origins and routes are illustrative, matching the
+  deck's own example screens. The contact address is a placeholder.
 
-## Status
+## EUDR figures
 
-Scaffolding. Nothing implemented yet.
+Commodities, the due diligence statement mechanism and the application dates come
+from the [European Commission's deforestation-free products page][ec]; the dates
+reflect the December 2024 and December 2025 amendments. Sugar, cotton and tea are
+*not* EUDR commodities — of the materials shown, only coffee is in scope.
+
+[ec]: https://environment.ec.europa.eu/topics/forests/deforestation/regulation-deforestation-free-products_en

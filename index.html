@@ -9,6 +9,7 @@
 <link rel="alternate" hreflang="en" href="./">
 <link rel="alternate" hreflang="es" href="./es/">
 <link rel="alternate" hreflang="x-default" href="./">
+<meta name="theme-color" content="#E6342A">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -16,12 +17,24 @@
 </head>
 <body>
 
+<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+<symbol id="i-origin" viewBox="0 0 24 24"><g class="icon__s"><path d="M12 21v-9"/><path d="M12 14c0-3.1 2.5-5.2 5.4-5.2C17.4 11.9 15 14 12 14Z"/><path d="M12 16.2c0-2.5-2-4.2-4.3-4.2C7.7 14.5 9.6 16.2 12 16.2Z"/><path d="M4.5 21h15"/></g></symbol>
+<symbol id="i-coop" viewBox="0 0 24 24"><g class="icon__s"><circle cx="12" cy="7.2" r="2.7"/><circle cx="5.3" cy="9.4" r="2"/><circle cx="18.7" cy="9.4" r="2"/><path d="M6.6 18.4a5.4 5.4 0 0 1 10.8 0"/><path d="M1.8 18.4a3.8 3.8 0 0 1 3.3-3.8"/><path d="M22.2 18.4a3.8 3.8 0 0 0-3.3-3.8"/></g></symbol>
+<symbol id="i-harvest" viewBox="0 0 24 24"><g class="icon__s"><path d="M3.6 11h16.8l-2 9H5.6l-2-9Z"/><path d="M12 11V7.4"/><path d="M12 8.6c0-2 1.6-3.4 3.5-3.4C15.5 7.2 13.9 8.6 12 8.6Z"/><path d="M12 9.4c0-1.7-1.4-3-3.1-3C8.9 8.1 10.3 9.4 12 9.4Z"/></g></symbol>
+<symbol id="i-process" viewBox="0 0 24 24"><g class="icon__s"><path d="M2.8 20v-8l4.7 2.8V12l4.7 2.8V12l4.6 2.8V20H2.8Z"/><path d="M19.4 20V6.5h2.2V20"/><path d="M6.4 20v-2.4M11 20v-2.4M15.6 20v-2.4"/></g></symbol>
+<symbol id="i-batch" viewBox="0 0 24 24"><g class="icon__s"><rect x="3.2" y="5.2" width="17.6" height="13.6"/><path d="M3.2 9.8h17.6M9.8 9.8v9"/><path d="M12.8 12.8h5M12.8 15.4h5"/></g></symbol>
+<symbol id="i-transport" viewBox="0 0 24 24"><g class="icon__s"><path d="M2 6.4h11.3v9.8H2z"/><path d="M13.3 9.8h3.5l3.2 2.9v3.5h-6.7z"/><circle cx="6.6" cy="17.6" r="1.9"/><circle cx="16.6" cy="17.6" r="1.9"/></g></symbol>
+<symbol id="i-pos" viewBox="0 0 24 24"><g class="icon__s"><path d="M3.6 10.4h16.8V20H3.6z"/><path d="M3 10.4 5.2 5h13.6l2.2 5.4"/><path d="M9.2 20v-5.4h5.6V20"/></g></symbol>
+<symbol id="i-evidence" viewBox="0 0 24 24"><g class="icon__s"><path d="M5.8 3.4h8.4l4 4v13.2H5.8z"/><path d="M14.2 3.4v4h4"/><path d="M8.8 10.6h5.6M8.8 13h3.8"/><path d="M9.2 16.4 11.3 18.6 15 14.8"/></g></symbol>
+</svg>
+
 <header class="nav">
   <div class="wrap nav__in">
-    <a class="wordmark" href="./">traza<small>Intelligent traceability</small></a>
+    <a href="./" class="nav__brand" aria-label="Traza — home"><span class="logo logo--sm"></span></a>
     <nav class="nav__links">
       <a href="#platform">Platform</a>
       <a href="#commodities">Commodities</a>
+      <a href="#product">Product</a>
       <a href="#eudr">EUDR</a>
       <a href="#contact">Contact</a>
     </nav>
@@ -31,116 +44,215 @@
 
 <main>
 
-  <section class="hero wrap">
-    <span class="label label--red">Origin &rarr; Process &rarr; Logistics &rarr; Retail</span>
-    <h1 class="display">Trace every handoff.<br>Prove every origin.</h1>
-    <p class="lede">Traza makes invisible supply chains legible — from the plot of land where a crop is grown to the pallet that reaches the shelf.</p>
-    <div class="cta-row">
-      <a class="btn btn--primary" href="#contact">Request a demo</a>
-      <a class="btn btn--ghost" href="#platform">See how it works</a>
-    </div>
+  <!-- ============ hero: the cover composition ============ -->
+  <section class="hero">
+    <div class="wrap">
+      <div class="rule mono"><span>Traza / Intelligent traceability</span><span>Origin → Process → Logistics → Retail</span></div>
+      <span class="logo logo--lg hero__brand" role="img" aria-label="Traza — intelligent traceability"></span>
+      <h1 class="display">Trace every handoff. Prove every origin.</h1>
+      <p class="hero__lede">Traza makes invisible supply chains legible — from the plot of land where a crop is grown to the pallet that reaches the shelf.</p>
+      <div class="cta-row">
+        <a class="btn btn--light" href="#contact">Request a demo</a>
+        <a class="btn btn--outline" href="#platform">See how it works</a>
+      </div>
 
-    <div class="trace" aria-hidden="true">
-      <svg viewBox="0 0 1200 200" role="presentation" preserveAspectRatio="xMidYMid meet">
-        <g class="trace__g">
-          <line class="trace__seg" x1="52" y1="140" x2="290" y2="140"/>
-          <circle class="trace__node" cx="40" cy="140" r="9"/>
-          <text class="trace__lbl" x="40" y="172">ORIGIN</text>
-        </g>
-        <g class="trace__g">
-          <line class="trace__seg" x1="322" y1="64" x2="560" y2="64"/>
-          <circle class="trace__node" cx="310" cy="64" r="9"/>
-          <text class="trace__lbl" x="310" y="96">MILL</text>
-        </g>
-        <g class="trace__g">
-          <line class="trace__seg" x1="592" y1="156" x2="830" y2="156"/>
-          <circle class="trace__node" cx="580" cy="156" r="9"/>
-          <text class="trace__lbl" x="580" y="188">PORT</text>
-        </g>
-        <g class="trace__g">
-          <line class="trace__seg" x1="862" y1="44" x2="1100" y2="44"/>
-          <circle class="trace__node trace__node--v" cx="850" cy="44" r="9"/>
-          <text class="trace__lbl trace__lbl--v" x="850" y="24">VERIFIED</text>
-          <text class="trace__lbl" x="850" y="76">WAREHOUSE</text>
-        </g>
-        <g class="trace__g">
-          <circle class="trace__node" cx="1130" cy="110" r="9"/>
-          <text class="trace__lbl" x="1130" y="142" text-anchor="end">RETAIL</text>
-        </g>
-      </svg>
+      <div class="trace" aria-hidden="true">
+        <svg viewBox="0 0 1440 250" preserveAspectRatio="xMidYMid meet">
+          <path class="tl__path tl__path--light" d="M40 195 H330 V70 H900 V195 H1400"/>
+          <text class="tl__lbl" x="40" y="232">ORIGIN</text>
+          <text class="tl__lbl" x="615" y="110" text-anchor="middle">CHANGE OF HANDS</text>
+          <text class="tl__lbl" x="1400" y="232" text-anchor="end">DESTINATION</text>
+          <circle class="tl__node tl__node--light" cx="40" cy="195" r="11"/>
+          <circle class="tl__node tl__node--light" cx="330" cy="195" r="11"/>
+          <circle class="tl__node tl__node--light" cx="330" cy="70" r="11"/>
+          <circle class="tl__node tl__node--light" cx="900" cy="70" r="11"/>
+          <circle class="tl__node tl__node--light" cx="1400" cy="195" r="11"/>
+        </svg>
+      </div>
     </div>
   </section>
 
+  <!-- ============ the idea ============ -->
+  <section class="sec sec--dark">
+    <div class="wrap">
+      <div class="rule mono"><span>01 / Traza</span><span>The idea</span></div>
+      <div class="sec__head">
+        <h2>The identity follows the journey.</h2>
+        <p class="lede">It does not invent a symbol for each product: it turns the continuity of the chain into its own visual grammar. The line is continuity, a node is an event, a red node is a verification.</p>
+      </div>
+      <p class="note">Visual principle: each node indicates a moment of the journey — it suggests continuity, it does not replace a real record.</p>
+    </div>
+  </section>
+
+  <!-- ============ platform / chain icons ============ -->
   <section class="sec" id="platform">
     <div class="wrap">
+      <div class="rule mono"><span>02 / Traza</span><span>How it works</span></div>
       <div class="sec__head">
-        <span class="label label--red">The platform</span>
         <h2>Every product leaves a trail.</h2>
-        <p class="lede">Traza records what happened to a lot at each step, who handled it, and where. The line stays continuous, so the evidence does too.</p>
+        <p class="lede">Traza records what happened to a lot at each step, who handled it and where — through every tier of the chain, from the field to the point of sale.</p>
       </div>
-      <div class="grid grid--4">
-        <div class="card">
-          <span class="label label--mut">01 / Capture</span>
-          <h3>At the origin</h3>
-          <p>Register producers, plots and harvests, with geolocation attached at the point of collection.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">02 / Follow</span>
-          <h3>Each handoff</h3>
-          <p>Every transfer, mix and transformation is recorded as an event on the lot, through each tier of the chain.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">03 / Verify</span>
-          <h3>Risk and exceptions</h3>
-          <p>Checks run against the chain as it builds. Gaps and exceptions surface while there is still time to resolve them.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">04 / Export</span>
-          <h3>The evidence</h3>
-          <p>Produce the dossier an auditor, a buyer or a regulator asks for, from the records already on the lot.</p>
-        </div>
+      <div class="icons">
+        <div class="icon"><span class="icon__n">01</span><svg><use href="#i-origin"/></svg><span class="icon__lbl">Origin</span></div>
+        <div class="icon"><span class="icon__n">02</span><svg><use href="#i-coop"/></svg><span class="icon__lbl">Cooperative</span></div>
+        <div class="icon"><span class="icon__n">03</span><svg><use href="#i-harvest"/></svg><span class="icon__lbl">Harvest</span></div>
+        <div class="icon"><span class="icon__n">04</span><svg><use href="#i-process"/></svg><span class="icon__lbl">Processing</span></div>
+        <div class="icon"><span class="icon__n">05</span><svg><use href="#i-batch"/></svg><span class="icon__lbl">Batch</span></div>
+        <div class="icon"><span class="icon__n">06</span><svg><use href="#i-transport"/></svg><span class="icon__lbl">Transport</span></div>
+        <div class="icon"><span class="icon__n">07</span><svg><use href="#i-pos"/></svg><span class="icon__lbl">Point of sale</span></div>
+        <div class="icon"><span class="icon__n">08</span><svg><use href="#i-evidence"/></svg><span class="icon__lbl">Evidence</span></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" id="commodities" style="background:#fff;border-top:1px solid var(--ink-12);border-bottom:1px solid var(--ink-12)">
+  <!-- ============ commodities ============ -->
+  <section class="sec sec--white" id="commodities">
     <div class="wrap">
-      <div class="grid grid--2" style="gap:48px;align-items:start">
-        <div>
-          <span class="label label--red">Commodities</span>
-          <h2>One brand, several materials.</h2>
-          <p class="lede">The chain differs by crop; the grammar does not. Traza models producers, lots, handoffs and evidence the same way whichever material moves through it.</p>
-          <div class="chips">
-            <span class="chip"><span class="chip__dot dot--scope"></span>Coffee</span>
-            <span class="chip"><span class="chip__dot dot--out"></span>Sugar</span>
-            <span class="chip"><span class="chip__dot dot--out"></span>Cotton</span>
-            <span class="chip"><span class="chip__dot dot--out"></span>Tea</span>
-          </div>
-          <p class="label label--mut" style="margin-top:18px;text-transform:none;letter-spacing:0">
-            <span class="chip__dot dot--scope"></span>In EUDR scope &nbsp;·&nbsp;
-            <span class="chip__dot dot--out"></span>Traceability only — not an EUDR commodity
-          </p>
+      <div class="rule mono"><span>03 / Traza</span><span>Architecture</span></div>
+      <div class="sec__head">
+        <h2>One brand. Many journeys.</h2>
+        <p class="lede">Coffee, sugar, cotton and tea are traceability contexts; they do not need four different identities. Categories are information, not sub-brands.</p>
+      </div>
+      <div class="journey">
+        <div class="journey__row"><span class="journey__rail"><span class="journey__dot"></span></span><span class="journey__n">01</span><span class="journey__name">Coffee</span><span class="journey__tag"><b>In EUDR scope</b></span></div>
+        <div class="journey__row"><span class="journey__rail"><span class="journey__dot"></span></span><span class="journey__n">02</span><span class="journey__name">Sugar</span><span class="journey__tag">Traceability</span></div>
+        <div class="journey__row"><span class="journey__rail"><span class="journey__dot"></span></span><span class="journey__n">03</span><span class="journey__name">Cotton</span><span class="journey__tag">Traceability</span></div>
+        <div class="journey__row"><span class="journey__rail"><span class="journey__dot"></span></span><span class="journey__n">04</span><span class="journey__name">Tea</span><span class="journey__tag">Traceability</span></div>
+      </div>
+      <p class="note" style="margin-top:22px">Of the four, only coffee is a commodity the EU Deforestation Regulation covers. The others are traced the same way, but they carry no EUDR due diligence obligation.</p>
+    </div>
+  </section>
+
+  <!-- ============ digital product ============ -->
+  <section class="sec" id="product">
+    <div class="wrap">
+      <div class="rule mono"><span>04 / Traza</span><span>Digital product</span></div>
+      <div class="sec__head">
+        <h2>Each product, a readable route.</h2>
+      </div>
+
+      <div class="app">
+        <div class="app__bar">
+          <span class="logo logo--sm" style="width:108px" role="img" aria-label="Traza"></span>
+          <span class="mono" style="font-size:12px">Traza / Cooperative space</span>
         </div>
-        <div class="evidence">
-          <div><span class="k">LOT</span> &nbsp;24-ETH-00913</div>
-          <div><span class="k">ORIGIN</span> &nbsp;SIDAMA / ET</div>
-          <div><span class="k">GEO</span> &nbsp;06.2148&deg; N 38.3368&deg; E</div>
-          <div><span class="k">HANDOFFS</span> &nbsp;4</div>
-          <div><span class="k">STATUS</span> &nbsp;<span class="v">VERIFIED 14:32 UTC</span></div>
+        <div class="app__body">
+          <nav class="app__nav">
+            <span class="label">Navigation</span>
+            <a href="#product">Summary</a>
+            <a href="#product" class="is-on">Batches</a>
+            <a href="#product">Routes</a>
+            <a href="#product">Evidence</a>
+          </nav>
+          <div class="app__main">
+            <h3 style="margin-bottom:4px">Batches</h3>
+            <p class="lede" style="font-size:17px;margin-bottom:22px">Each product, a readable route.</p>
+            <table class="app__tbl">
+              <thead><tr><th>Batch</th><th>Product</th><th>Origin</th><th>Status</th></tr></thead>
+              <tbody>
+                <tr><td>TRZ-001</td><td><strong>Coffee</strong></td><td>Colombia</td><td><span class="pill pill--prog">In progress</span></td></tr>
+                <tr><td>TRZ-002</td><td><strong>Cocoa</strong></td><td>Ghana</td><td><span class="pill pill--ver">Verified</span></td></tr>
+                <tr><td>TRZ-003</td><td><strong>Sugar</strong></td><td>Brazil</td><td><span class="pill pill--rev">Review</span></td></tr>
+              </tbody>
+            </table>
+            <p class="note" style="margin:18px 0 0">Example screen · sample data to show the interface</p>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- ============ scan and follow ============ -->
+  <section class="sec sec--dark">
+    <div class="wrap">
+      <div class="rule mono"><span>05 / Traza</span><span>Scan and follow</span></div>
+      <div class="sec__head">
+        <h2>Scan and follow.</h2>
+        <p class="lede">A code on the label opens the route the lot actually travelled — the same thread, from physical support to data.</p>
+      </div>
+      <div class="scan">
+        <div class="card-app">
+          <div class="card-app__bar"><span class="logo" style="width:92px" role="img" aria-label="Traza"></span></div>
+          <div class="card-app__body">
+            <h3 style="font-size:22px">Scan batch</h3>
+            <p style="color:var(--ink-60);font-size:15px;margin:0">Focus on the label code.</p>
+            <div class="frame">
+              <span class="frame__c tl"></span><span class="frame__c tr"></span>
+              <span class="frame__c bl"></span><span class="frame__c br"></span>
+              <span class="frame__scan"></span>
+              <span class="frame__t">PLACE THE CODE HERE</span>
+            </div>
+            <a class="btn btn--red" style="display:block;text-align:center" href="#contact">Start scan</a>
+          </div>
+        </div>
+        <div class="card-app">
+          <div class="card-app__bar"><span class="logo" style="width:92px" role="img" aria-label="Traza"></span></div>
+          <div class="card-app__body">
+            <p class="mono" style="color:var(--red);font-size:12px;margin:0 0 6px">Batch TRZ-001</p>
+            <h3 style="font-size:22px">Coffee / Colombia</h3>
+            <p class="mono" style="background:var(--paper);padding:10px 12px;font-size:11.5px;margin:12px 0 0">Route available</p>
+            <ul class="route">
+              <li><b></b><span><span class="n">01 / Origin</span><span class="d">Cooperative</span></span></li>
+              <li><b></b><span><span class="n">02 / Collection</span><span class="d">Reception centre</span></span></li>
+              <li><b></b><span><span class="n">03 / Delivery</span><span class="d">Commercial destination</span></span></li>
+            </ul>
+            <a class="btn btn--ink" style="display:block;text-align:center" href="#eudr">View evidence</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ batch label ============ -->
+  <section class="sec">
+    <div class="wrap">
+      <div class="rule mono"><span>06 / Traza</span><span>Batch label</span></div>
+      <div class="split">
+        <div>
+          <h2>The same thread, from support to data.</h2>
+          <p class="lede">The label carries the brand, the batch and a real code. Scanning it returns a continuous reading on label, document or screen.</p>
+          <div class="evidence" style="margin-top:28px">
+            <div><span class="k">LOT</span> &nbsp;24-ETH-00913</div>
+            <div><span class="k">ORIGIN</span> &nbsp;SIDAMA / ET</div>
+            <div><span class="k">GEO</span> &nbsp;06.2148&deg; N 38.3368&deg; E</div>
+            <div><span class="k">HANDOFFS</span> &nbsp;4</div>
+            <div><span class="k">STATUS</span> &nbsp;<span class="v">VERIFIED 14:32 UTC</span></div>
+          </div>
+        </div>
+        <div class="lbl">
+          <span class="logo lbl__brand" style="width:150px" role="img" aria-label="Traza"></span>
+          <div class="lbl__rule"></div>
+          <p class="lbl__big">Coffee</p>
+          <p class="lbl__sub">Batch / TRZ-001</p>
+          <div style="display:flex;gap:20px;align-items:flex-start;justify-content:space-between">
+            <table class="lbl__kv">
+              <tr><th>Origin</th><td>Colombia</td></tr>
+              <tr><th>Entity</th><td>Cooperative</td></tr>
+              <tr><th>Date</th><td>DD.MM.YYYY</td></tr>
+            </table>
+            <div class="lbl__code" aria-hidden="true">
+              <svg width="44" height="44" viewBox="0 0 44 44" fill="none" stroke="#E6342A" stroke-width="4">
+                <path d="M4 14V4h10M30 4h10v10M40 30v10H30M14 40H4V30"/>
+              </svg>
+              <span>REAL CODE</span>
+            </div>
+          </div>
+          <a class="lbl__cta" href="#contact">Scan to see the route →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ EUDR ============ -->
   <section class="sec sec--dark" id="eudr">
     <div class="wrap">
+      <div class="rule mono"><span>07 / Traza</span><span>Regulation (EU) 2023/1115</span></div>
       <div class="sec__head">
-        <span class="label label--red">Regulation (EU) 2023/1115</span>
         <h2>Built for EUDR due diligence.</h2>
         <p class="lede">The EU Deforestation Regulation bars seven commodities and their derived products from the EU market, or from export, unless they are deforestation-free and legally produced. Proving that is a traceability problem.</p>
       </div>
 
-      <div class="grid grid--2" style="gap:48px;align-items:start">
+      <div class="split">
         <div>
           <h3>What an operator has to show</h3>
           <p style="color:var(--paper-60)">An operator placing a relevant product on the EU market for the first time carries out due diligence and submits a due diligence statement to the EUDR Information System, a tool on the EU's TRACES platform. Per shipment that means:</p>
@@ -150,7 +262,7 @@
             <li>evidence of legal production in the country of origin</li>
             <li>a risk assessment, and mitigation where risk is not negligible</li>
           </ul>
-          <p class="label label--mut" style="text-transform:none;letter-spacing:0;line-height:24px">Covered commodities: cattle, cocoa, coffee, oil palm, rubber, soya and wood, plus the derived products listed in Annex I. Of the materials above, coffee is in scope.</p>
+          <p class="note">Covered commodities: cattle, cocoa, coffee, oil palm, rubber, soya and wood, plus the derived products listed in Annex I.</p>
         </div>
         <div>
           <h3>When it applies</h3>
@@ -169,44 +281,33 @@
     </div>
   </section>
 
+  <!-- ============ principles ============ -->
   <section class="sec">
     <div class="wrap">
-      <div class="sec__head">
-        <span class="label label--red">Principles</span>
-        <h2>Traza makes invisible supply chains legible.</h2>
-      </div>
+      <div class="rule mono"><span>08 / Traza</span><span>Principles</span></div>
+      <div class="sec__head"><h2>Traza makes invisible supply chains legible.</h2></div>
       <div class="grid grid--2">
-        <div class="card card--ink">
-          <span class="label label--red">01 / Exact</span>
-          <h3>Evidence over decoration</h3>
-          <p style="color:var(--paper-60)">Numbers, IDs, timestamps and route logic are the language, not ornament around it.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">02 / Human</span>
-          <h3>Technology with context</h3>
-          <p>We trace products, but also the people, places and decisions behind them.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">03 / Global</span>
-          <h3>Built to cross borders</h3>
-          <p>A neutral, multilingual grammar that works from cooperative to enterprise.</p>
-        </div>
-        <div class="card">
-          <span class="label label--mut">04 / Auditable</span>
-          <h3>Proof, not promises</h3>
-          <p>Verification, continuity and accountability are what the system communicates.</p>
-        </div>
+        <div class="card card--ink"><span class="label label--red">01 / Exact</span><h3>Evidence over decoration</h3><p>Numbers, IDs, timestamps and route logic are the language, not ornament around it.</p></div>
+        <div class="card"><span class="label label--mut">02 / Human</span><h3>Technology with context</h3><p>We trace products, but also the people, places and decisions behind them.</p></div>
+        <div class="card"><span class="label label--mut">03 / Global</span><h3>Built to cross borders</h3><p>A neutral, multilingual grammar that works from cooperative to enterprise.</p></div>
+        <div class="card"><span class="label label--mut">04 / Auditable</span><h3>Proof, not promises</h3><p>Verification, continuity and accountability are what the system communicates.</p></div>
       </div>
     </div>
   </section>
 
-  <section class="sec sec--red" id="contact">
-    <div class="wrap">
-      <h2 style="max-width:760px">See it against one of your own supply chains.</h2>
-      <p style="max-width:620px;font-size:20px;line-height:30px;color:rgba(255,255,255,0.86)">Bring a lot you already ship. We will walk it through Traza from origin to delivery and show you the dossier that comes out.</p>
-      <div class="cta-row">
-        <a class="btn" style="background:#fff;color:var(--traza-red)" href="mailto:hello@traza.example?subject=Traza%20demo%20request">Request a demo</a>
-      </div>
+  <!-- ============ contact: signage band ============ -->
+  <section id="contact">
+    <div class="wrap" style="padding-top:clamp(50px,7vw,80px);padding-bottom:clamp(50px,7vw,80px)">
+      <a href="mailto:hello@traza.example?subject=Traza%20demo%20request" style="text-decoration:none;color:inherit">
+        <div class="sign" style="background:var(--red);color:#fff">
+          <div>
+            <p class="sign__t">See the route</p>
+            <p class="mono" style="margin:14px 0 0;color:var(--white-70)">Traza / Request a demo</p>
+          </div>
+          <span class="sign__a" aria-hidden="true">→</span>
+        </div>
+      </a>
+      <p class="note" style="margin-top:18px">Bring a lot you already ship. We will walk it through Traza from origin to delivery and show you the dossier that comes out.</p>
     </div>
   </section>
 
@@ -215,14 +316,12 @@
 <footer class="foot">
   <div class="wrap">
     <div class="foot__in">
-      <div>
-        <span class="wordmark" style="font-size:26px">traza<small>Intelligent traceability</small></span>
-      </div>
+      <span class="logo" style="width:150px" role="img" aria-label="Traza — intelligent traceability"></span>
       <p class="foot__note">Traza records producers, lots, handoffs and evidence across agricultural supply chains, and supports EUDR due diligence for the commodities the regulation covers.</p>
     </div>
-    <div class="foot__bar">
-      <span class="label" style="color:var(--paper-60)">Brand system / v1.0 / 2026</span>
-      <span class="label"><a href="es/" hreflang="es" lang="es" style="color:var(--paper-60)">Ver en español</a></span>
+    <div class="foot__bar mono">
+      <span>Brand system / v1.0 / 2026</span>
+      <span><a href="es/" hreflang="es" lang="es">Ver en español</a></span>
     </div>
   </div>
 </footer>
