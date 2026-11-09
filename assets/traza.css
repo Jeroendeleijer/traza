@@ -1,0 +1,264 @@
+/* TRAZA — brand system v1.0 (2026)
+   Colour, type scale and the Trace Line device follow the supplied deck. */
+
+:root {
+  --traza-red: #E6342A;
+  --ink:       #151515;
+  --paper:     #F4F1EA;
+  --cobalt:    #2452FF;
+  --teal:      #1F8A70;
+  --ochre:     #C6922E;
+
+  --ink-60: rgba(21, 21, 21, 0.60);
+  --ink-12: rgba(21, 21, 21, 0.12);
+  --paper-60: rgba(244, 241, 234, 0.60);
+  --paper-16: rgba(244, 241, 234, 0.16);
+
+  --sans: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  --gutter: 16px;
+  --maxw: 1200px;
+}
+
+@media (min-width: 768px) { :root { --gutter: 48px; } }
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: var(--sans);
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+}
+
+.wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--gutter); }
+
+/* ---------- type scale: display 72/76, h1 44/50, h2 28/34, body 18/27, label 13/18 */
+
+.display {
+  font-size: clamp(40px, 7.4vw, 72px);
+  line-height: 1.06;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin: 0;
+}
+
+h2 {
+  font-size: clamp(32px, 4.4vw, 44px);
+  line-height: 1.14;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+  margin: 0 0 16px;
+}
+
+h3 {
+  font-size: clamp(22px, 2.6vw, 28px);
+  line-height: 1.21;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0 0 8px;
+}
+
+p { margin: 0 0 16px; }
+.lede { font-size: clamp(19px, 2.1vw, 22px); line-height: 1.5; color: var(--ink-60); }
+
+.label {
+  font-family: var(--mono);
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.label--red { color: var(--traza-red); }
+.label--mut { color: var(--ink-60); }
+
+/* ---------- wordmark */
+
+.wordmark {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 1;
+  letter-spacing: -0.035em;
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+
+.wordmark small {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.005em;
+  margin-top: 3px;
+  opacity: 0.85;
+}
+
+/* ---------- nav */
+
+.nav {
+  position: sticky; top: 0; z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--ink-12);
+}
+
+.nav__in {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 24px; padding-top: 18px; padding-bottom: 18px;
+}
+
+.nav__links { display: none; gap: 28px; align-items: center; }
+@media (min-width: 900px) { .nav__links { display: flex; } }
+
+.nav__links a {
+  color: var(--ink); text-decoration: none;
+  font-size: 16px; font-weight: 500;
+}
+.nav__links a:hover { color: var(--traza-red); }
+
+.lang {
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  border: 1px solid var(--ink-12); border-radius: 999px;
+  padding: 7px 14px; text-decoration: none; color: var(--ink);
+  white-space: nowrap;
+}
+.lang:hover { border-color: var(--traza-red); color: var(--traza-red); }
+
+/* ---------- sections */
+
+.sec { padding: clamp(64px, 10vw, 112px) 0; }
+.sec--dark { background: var(--ink); color: var(--paper); }
+.sec--dark h2, .sec--dark h3 { color: var(--paper); }
+.sec--dark .lede { color: var(--paper-60); }
+.sec--red { background: var(--traza-red); color: #fff; }
+.sec--red h2 { color: #fff; }
+
+.sec__head { max-width: 760px; margin-bottom: 48px; }
+.sec__head .label { margin-bottom: 14px; display: block; }
+
+/* ---------- hero */
+
+.hero { padding-top: clamp(56px, 9vw, 96px); padding-bottom: clamp(40px, 6vw, 64px); }
+.hero .label { display: block; margin-bottom: 22px; }
+.hero .lede { max-width: 620px; margin-top: 24px; }
+
+.cta-row { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
+
+.btn {
+  display: inline-block; text-decoration: none;
+  font-size: 16px; font-weight: 600;
+  padding: 14px 26px; border-radius: 999px;
+  border: 1px solid transparent;
+}
+.btn--primary { background: var(--traza-red); color: #fff; }
+.btn--primary:hover { background: #c9281f; }
+.btn--ghost { border-color: var(--ink-12); color: var(--ink); }
+.btn--ghost:hover { border-color: var(--ink); }
+
+/* ---------- the trace line */
+
+.trace { margin-top: clamp(40px, 6vw, 64px); }
+.trace svg { width: 100%; height: auto; display: block; overflow: visible; }
+
+.trace__seg { stroke: var(--ink); stroke-width: 2; }
+.sec--dark .trace__seg { stroke: var(--paper); }
+
+.trace__node { fill: var(--ink); }
+.sec--dark .trace__node { fill: var(--paper); }
+.trace__node--v { fill: var(--traza-red); }
+
+.trace__lbl {
+  font-family: var(--mono); font-size: 14px; font-weight: 500;
+  letter-spacing: 0.1em; fill: var(--ink-60);
+}
+
+/* the svg scales with its container, so small screens need larger user units */
+@media (max-width: 760px) {
+  .trace__lbl { font-size: 24px; }
+  .trace__node { r: 16px; }
+  .trace__seg { stroke-width: 4; }
+}
+.sec--dark .trace__lbl { fill: var(--paper-60); }
+.trace__lbl--v { fill: var(--traza-red); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .trace__seg { stroke-dasharray: 240; stroke-dashoffset: 240; animation: draw 1.1s ease-out forwards; }
+  .trace__node { opacity: 0; animation: pop 0.45s ease-out forwards; }
+  .trace__g:nth-child(1) .trace__seg { animation-delay: 0.05s } .trace__g:nth-child(1) .trace__node { animation-delay: 0.00s }
+  .trace__g:nth-child(2) .trace__seg { animation-delay: 0.30s } .trace__g:nth-child(2) .trace__node { animation-delay: 0.25s }
+  .trace__g:nth-child(3) .trace__seg { animation-delay: 0.55s } .trace__g:nth-child(3) .trace__node { animation-delay: 0.50s }
+  .trace__g:nth-child(4) .trace__seg { animation-delay: 0.80s } .trace__g:nth-child(4) .trace__node { animation-delay: 0.75s }
+  .trace__g:nth-child(5) .trace__node { animation-delay: 1.00s }
+}
+@keyframes draw { to { stroke-dashoffset: 0; } }
+@keyframes pop { to { opacity: 1; } }
+
+/* ---------- grids and cards */
+
+.grid { display: grid; gap: 20px; grid-template-columns: 1fr; }
+@media (min-width: 700px) { .grid--2 { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 900px) { .grid--4 { grid-template-columns: repeat(4, 1fr); } }
+
+.card {
+  background: #fff; border-radius: 18px; padding: 30px;
+  border: 1px solid var(--ink-12);
+}
+.card .label { display: block; margin-bottom: 14px; }
+.card p:last-child { margin-bottom: 0; }
+
+.sec--dark .card { background: #1f1f1f; border-color: var(--paper-16); }
+.card--ink { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+.card--ink h3 { color: var(--paper); }
+
+/* ---------- commodity chips */
+
+.chips { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px; }
+.chip {
+  font-family: var(--mono); font-size: 13px; font-weight: 500;
+  letter-spacing: 0.06em; text-transform: uppercase;
+  border: 1px solid var(--ink-12); border-radius: 999px; padding: 9px 16px;
+}
+.chip__dot { display: inline-block; width: 7px; height: 7px; border-radius: 50%; margin-right: 8px; vertical-align: 1px; }
+.dot--scope { background: var(--teal); }
+.dot--out   { background: var(--ink-12); }
+.sec--dark .chip { border-color: var(--paper-16); }
+
+/* ---------- evidence block */
+
+.evidence {
+  background: var(--ink); color: var(--paper);
+  border-radius: 18px; padding: 30px;
+  font-family: var(--mono); font-size: 15px; line-height: 28px;
+}
+.evidence .k { color: var(--paper-60); }
+.evidence .v { color: var(--traza-red); }
+
+/* ---------- table */
+
+.tbl { width: 100%; border-collapse: collapse; margin-top: 8px; font-size: 16px; }
+.tbl th, .tbl td { text-align: left; padding: 14px 16px 14px 0; border-bottom: 1px solid var(--paper-16); vertical-align: top; }
+.tbl th { font-family: var(--mono); font-size: 12px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--paper-60); }
+.tbl td:last-child { font-family: var(--mono); white-space: nowrap; }
+
+/* ---------- footer */
+
+.foot { background: var(--ink); color: var(--paper); padding: 64px 0 40px; }
+.foot a { color: var(--paper); }
+.foot__in { display: flex; flex-wrap: wrap; gap: 32px; justify-content: space-between; align-items: flex-start; }
+.foot__note { color: var(--paper-60); font-size: 15px; max-width: 520px; }
+.foot__bar { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--paper-16); display: flex; flex-wrap: wrap; gap: 16px; justify-content: space-between; }
+
+.src { color: var(--paper-60); font-size: 14px; }
+.src a { color: var(--paper); text-decoration: underline; text-underline-offset: 3px; }
+
+:focus-visible { outline: 3px solid var(--traza-red); outline-offset: 3px; border-radius: 4px; }
